@@ -6,11 +6,11 @@ import Main from "./components/Main";
 
 const App = () => {
   return (
-    <Grid templateColumns="repeat(12, 1fr)">
-      <GridItem colSpan={1}>
+    <Grid templateColumns="repeat(14, 1fr)">
+      <GridItem colSpan={1} >
         <SideNavBar />
       </GridItem>
-      <GridItem colSpan={11} mr={'32px'}>
+      <GridItem colSpan={13} mr={'32px'}>
         <Header />  
         <Main />
       </GridItem>

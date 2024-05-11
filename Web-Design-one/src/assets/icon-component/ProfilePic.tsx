@@ -1,8 +1,8 @@
 import { Image } from "@chakra-ui/react";
-import ProfileImage from "../assets/icons/ProfilePic.png";
+
 
 const ProfilePic = () => {
-  return <Image src={ProfileImage} borderRadius='full'></Image>
+  return <Image src='../assets/icons/ProfilePic.jpg' borderRadius='full'></Image>
 }
 
 export default ProfilePic;
