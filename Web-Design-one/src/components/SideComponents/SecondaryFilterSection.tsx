@@ -1,21 +1,18 @@
-import {Box,
+import {
+  Box,
   Button,
   HStack,
   Switch,
   Text,
   SimpleGrid,
   Menu,
-  MenuButton
+  MenuButton,
 } from "@chakra-ui/react";
 
 import SortIcon from "../../assets/icon-component/SortIcon";
 import VerifiedIcon from "../../assets/icon-component/VerifiedIcon";
 import AddCreatorIcon from "../../assets/icon-component/AddCreatorIcon";
 import DropDownIconWhite from "../../assets/icon-component/DropDownIconWhite";
-
-
-
-
 
 const SecondoryFilterSection = () => {
   return (
@@ -52,7 +49,7 @@ const SecondoryFilterSection = () => {
               as={Button}
               leftIcon={<AddCreatorIcon />}
               rightIcon={<DropDownIconWhite />}
-              size={'lg'}
+              size={"lg"}
               px={4}
               py={6}
               bgColor="black"

@@ -1,11 +1,10 @@
 import { Box} from "@chakra-ui/react";
-
-import FilterSections from "./SideComponents/SecondaryFilterSection";
-import SecondaryFilter from "./SideComponents/FilterResult";
-import CardsSection from "./SideComponents/CardsSection";
 import PrimaryFilter from "./SideComponents/PrimaryFilter";
+import SecondaryFilterSection from "./SideComponents/SecondaryFilterSection";
+import FilterResult from "./SideComponents/FilterResult";
 
-const Main = () => {
+
+const MainPage = () => {
   return (
     <>
       <Box
@@ -17,12 +16,12 @@ const Main = () => {
         overflow={'hidden'}
       >
         <PrimaryFilter />
-        <FilterSections />
-        <SecondaryFilter/>
-        <CardsSection/>
+        <SecondaryFilterSection />
+        <FilterResult />
+        
       </Box>
     </>
   );
 };
 
-export default Main;
+export default MainPage;

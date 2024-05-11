@@ -4,17 +4,13 @@ import {
   Card,
   Grid,
   GridItem,
-  HStack,
-  Input,
-  Menu,
-  MenuItem,
   Text,
 } from "@chakra-ui/react";
-import DropDownArrowBlack from "../../assets/icon-component/DropDownArrowBlack";
+
 
 const PrimaryFilter = () => {
   return (
-    <Card className="PrimaryFilterSection" align={"center"} bgColor={"yellow"}>
+    <Card className="PrimaryFilterSection" align={"center"}bgColor={"yellow"}>
       <Box px={"120px"} my={"60px"} bgColor={"null"} width={"100%"}>
         <Box
           className="FilterBoxTop"
