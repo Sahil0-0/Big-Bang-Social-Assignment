@@ -2,88 +2,62 @@ import {
   Box,
   Button,
   Card,
+  Grid,
+  GridItem,
   HStack,
-  Heading,
   Input,
-  Stack,
+  Menu,
+  MenuItem,
   Text,
-  VStack,
 } from "@chakra-ui/react";
+import DropDownArrowBlack from "../../assets/icon-component/DropDownArrowBlack";
 
 const PrimaryFilter = () => {
   return (
-    <Card align={"center"} bgColor={"yellow"}>
-      <Box mx={"120px"} my={"60px"} bgColor={"null"}>
-        <VStack gap={"4"}>
-          <Box bgColor={"white"} borderRadius={"12px"}>
-            <HStack px="20px" py="20px">
-              <Stack>
-                <Card p={"10px"}>
-                  <Input
-                    placeholder="Audience Locaition"
-                    variant={"unstyled"}
-                  ></Input>
-                  <Box>
-                    <Text as="b" align={"center"}>
-                      All
-                    </Text>
-                  </Box>
-                </Card>
-              </Stack>
+    <Card className="PrimaryFilterSection" align={"center"} bgColor={"yellow"}>
+      <Box px={"120px"} my={"60px"} bgColor={"null"} width={"100%"}>
+        <Box
+          className="FilterBoxTop"
+          bgColor={"white"}
+          borderRadius={"12px"}
+          mb={"10px"}
+        >
+          <Grid templateColumns="repeat(5, 1fr)" py={"16px"} px="10px">
+            <GridItem px={"10px"} borderRight={"2px"} borderColor={"gray"}>
+              <Text textColor={"gray"}>Audience Location</Text>
+              <Text as="b">All</Text>
+            </GridItem>
+            <GridItem px={"10px"} borderRight={"2px"} borderColor={"gray"}>
+              <Text textColor={"gray"}>Audience Location</Text>
+              <Text as="b">Choose Size</Text>
+            </GridItem>
+            <GridItem px={"10px"} borderRight={"2px"} borderColor={"gray"}>
+              <Text textColor={"gray"}>Audience Location</Text>
+              <Text as="b">Any</Text>
+            </GridItem>
+            <GridItem px={"10px"}>
+              <Text textColor={"gray"}>Audience Location</Text>
+              <Text as="b">Any</Text>
+            </GridItem>
+            <GridItem px={"10px"}>
+              <Button
+                w={"100%"}
+                h="100%"
+                p={5}
+                bgColor={"gray.900"}
+                textColor={"White"}
+                size="lg"
+                borderRadius={"12px"}
+              >
+                Show 4M results
+              </Button>
+            </GridItem>
+          </Grid>
+        </Box>
 
-              <Stack>
-                <Card p={"10px"}>
-                  <Input
-                    placeholder="Influencer Size"
-                    variant={"unstyled"}
-                  ></Input>
-                  <Box>
-                    <Text as="b" align={"center"}>
-                      Choose Size
-                    </Text>
-                  </Box>
-                </Card>
-              </Stack>
-              <Stack>
-                <Card p={"10px"}>
-                  <Input
-                    placeholder="Audience Age"
-                    variant={"unstyled"}
-                  ></Input>
-                  <Box>
-                    <Text as="b" align={"center"}>
-                      All
-                    </Text>
-                  </Box>
-                </Card>
-              </Stack>
-              <Stack>
-                <Card p={"10px"}>
-                  <Input
-                    placeholder="Audience Gender"
-                    variant={"unstyled"}
-                  ></Input>
-                  <Box>
-                    <Text as="b" align={"center"}>
-                      All
-                    </Text>
-                  </Box>
-                </Card>
-              </Stack>
-              <Stack>
-                <Button bg={"black"} textColor={"white"} p={"10px"} size={'lg'}>
-                  Show 4M results
-                </Button>
-              </Stack>
-            </HStack>
-          </Box>
-          <Box bgColor={"white"} borderRadius={"12px"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam
-            excepturi deserunt, magni dolore quam? Quaerat ratione neque id
-            architecto at distinctio reprehenderit, voluptas ea magnam totam
-            iure a. Odio.
-          </Box>
-        </VStack>
+        <Box className="FilterBoxTwo" borderRadius={"12px"} bgColor={'white'} px={'20px'} py={'16px'}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit officiis distinctio vitae at? Debitis nihil totam sequi id aperiam consectetur natus saepe deserunt, consequatur recusandae dolorem voluptates voluptatum dolor libero!
+        </Box>
       </Box>
     </Card>
   );

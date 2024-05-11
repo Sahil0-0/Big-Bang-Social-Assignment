@@ -28,7 +28,12 @@ const SecondoryFilterSection = () => {
       >
         <SimpleGrid>
           <HStack ml={"28px"}>
-            <Button rightIcon={<SortIcon />} variant={"outline"} size={"md"}>
+            <Button
+              rightIcon={<SortIcon />}
+              variant={"outline"}
+              size={"lg"}
+              borderRadius={"12px"}
+            >
               Best Relevance
             </Button>
             <HStack>
@@ -37,16 +42,19 @@ const SecondoryFilterSection = () => {
               </Box>
               <Text fontSize={"16px"}>App Creators</Text>
             </HStack>
-            <Switch size="sm" pl={4} />
+            <Switch size="sm" pl={2} />
           </HStack>
         </SimpleGrid>
 
         <HStack gap={4}>
           <Menu>
-            <MenuButton as={Button}
-              leftIcon={<AddCreatorIcon/>}
-              rightIcon={<DropDownIconWhite/>}
-              size={"lg"}
+            <MenuButton
+              as={Button}
+              leftIcon={<AddCreatorIcon />}
+              rightIcon={<DropDownIconWhite />}
+              size={'lg'}
+              px={4}
+              py={6}
               bgColor="black"
               variant={"solid"}
               textColor={"white"}

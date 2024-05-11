@@ -1,10 +1,10 @@
-import { Box, Card, HStack, Text } from "@chakra-ui/react";
+import {Card, HStack, Text } from "@chakra-ui/react";
 
 
 const SecondaryFilter = () => {
   return (
     <Card
-      className="SecondaryFilter"
+      className="FilterResult"
       variant={"unstyled"}
       borderRadius={"full"}
       m={"24px"}
@@ -12,15 +12,7 @@ const SecondaryFilter = () => {
       <HStack>
         <Text>
           Showing <b>234</b> Result
-        </Text>
-
-        
-          <Card>
-            <Box pr={"500px"} bg={"gray.400"}>
-            <Text>21/54</Text>
-            </Box>
-          </Card>
-        
+        </Text>        
       </HStack>
     </Card>
   );
