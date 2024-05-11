@@ -9,7 +9,7 @@ const CardsSection = () => {
       m={'20px'}
       boxShadow={'null'}
     >
-      hi
+      this is the main card
 
     </Card>
   );
