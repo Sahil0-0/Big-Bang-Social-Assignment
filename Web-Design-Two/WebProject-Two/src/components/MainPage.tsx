@@ -34,6 +34,7 @@ import NicheIcon from "../assets/icon-component/NiceIcon";
 import BudgetIcon from "../assets/icon-component/BudgetIcon";
 import SearchIcon from "../assets/icon-component/SearchIcon";
 import FilterIcon from "../assets/icon-component/FilterIcon";
+import CloseCircleIcon from "../assets/icon-component/CloseCircleIcon";
 const MainPage = () => {
   return (
     <Box alignContent={"start"}>
@@ -459,14 +460,46 @@ const MainPage = () => {
                 <Box mt={"24px"}>
                   <HStack justifyContent={"space-between"}>
                     <HStack gap={"14px"}>
-                      
-                        <Button variant={"outline"} m={'null'}>test</Button>
-                      
+                      <Card
+                        as={"b"}
+                        borderRadius={"null"}
+                        boxShadow={"null"}
+                        borderBottomWidth={"2px"}
+                        borderBottomColor={"#FFC700"}
+                      >
+                        <Text>All (64)</Text>
+                      </Card>
+                      <Card borderRadius={"null"} boxShadow={"null"}>
+                        <Text textColor={"#666666"}>Invited (40) </Text>
+                      </Card>
+
+                      <Card borderRadius={"null"} boxShadow={"null"}>
+                        <Text textColor={"#666666"}>
+                          Pending cost approval (12){" "}
+                        </Text>
+                      </Card>
+
+                      <Card borderRadius={"null"} boxShadow={"null"}>
+                        <Text textColor={"#666666"}>Approved (12)</Text>
+                      </Card>
                     </HStack>
 
-                    <Box>test</Box>
+                    <Box>
+                      <Button
+                        leftIcon={<CloseCircleIcon />}
+                        px={"16px"}
+                        py={"10px"}
+                        fontWeight={"bold"}
+                        variant={"outline"}
+                        borderColor={"black"}
+                      >
+                        Close Applications (14)
+                      </Button>
+                    </Box>
                   </HStack>
                 </Box>
+
+                <Box className={"CardSections"}></Box>
               </Box>
             </Stack>
           </Box>
