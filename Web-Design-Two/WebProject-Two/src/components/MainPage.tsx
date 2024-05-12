@@ -2,23 +2,16 @@ import {
   Box,
   Button,
   Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
   Divider,
   Flex,
   HStack,
-  Icon,
   Input,
   InputGroup,
   InputLeftElement,
   Menu,
   MenuButton,
-  MenuItem,
-  MenuList,
   Stack,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import DropDownArrowBlack from "../assets/icon-component/DropDownArrowBlack";
 import LockIcon from "../assets/icon-component/LockIcon";
@@ -37,8 +30,8 @@ import FilterIcon from "../assets/icon-component/FilterIcon";
 import CloseCircleIcon from "../assets/icon-component/CloseCircleIcon";
 const MainPage = () => {
   return (
-    <Box alignContent={"start"}>
-      <HStack gap={"12px"} justifyContent={""}>
+    <Box>
+      <Stack direction={'row'} gap={"12px"} >
         <Flex
           className={"MainSectionOne"}
           w={"30%"}
@@ -300,7 +293,7 @@ const MainPage = () => {
                             borderRadius={"full"}
                             boxShadow={"null"}
                           >
-                            <Text>Fashion/ beauty</Text>
+                            <Text >Fashion/ beauty</Text>
                           </Card>
                           <Card
                             px={"12px"}
@@ -382,6 +375,7 @@ const MainPage = () => {
           //this is for th second section of the main page
           className={"MainSectionTwo"}
           w={"70%"}
+          h={'fit-content'}
           border={"2px"}
           borderRadius={"16px"}
           overflow={"hidden"}
@@ -504,7 +498,7 @@ const MainPage = () => {
             </Stack>
           </Box>
         </Flex>
-      </HStack>
+      </Stack>
     </Box>
   );
 };
