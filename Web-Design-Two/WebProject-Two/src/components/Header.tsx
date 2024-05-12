@@ -36,7 +36,9 @@ const Header = () => {
           borderRadius="full"
           variant="outline"
           colorScheme="black"
-          p={"revert-layer"}
+          pr={"16px"}
+          pl={"4px"}
+          w={"fit-content"}
         >
           25,635 Coins
         </Button>
@@ -61,8 +63,10 @@ const Header = () => {
           borderRadius="full"
           variant="outline"
           borderColor={"black"}
-          p={"revert-layer"}
+          pr={"16px"}
+          pl={"4px"}
           size={"lg"}
+          w={"fit-content"}
         >
           Sahil Singh
         </Button>
