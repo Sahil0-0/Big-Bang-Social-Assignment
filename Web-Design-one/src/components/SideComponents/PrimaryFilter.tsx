@@ -1,61 +1,188 @@
 import {
   Box,
   Button,
-  Card,
-  Grid,
-  GridItem,
+  Center,
+  Divider,
+  HStack,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Stack,
   Text,
+  
 } from "@chakra-ui/react";
-
+import DropDownArrowBlack from "../../assets/icon-component/DropDownArrowBlack";
+import { SearchIcon } from "@chakra-ui/icons";
+import img from '../../assets/icons/filterBack.png'
 
 const PrimaryFilter = () => {
   return (
-    <Card className="PrimaryFilterSection" align={"center"}bgColor={"yellow"}>
-      <Box px={"120px"} my={"60px"} bgColor={"null"} width={"100%"}>
+    <Box
+      className="PrimaryFilterSection"
+      bgImage={img}
+      bgSize={"100%"}
+      bgRepeat={"0"}
+    >
+      <Stack
+        className="FilterBoxTop"
+        px={"120px"}
+        py={"60px"}
+        bgColor={"null"}
+        width={"100%"}
+        gap={"10px"}
+      >
         <Box
-          className="FilterBoxTop"
-          bgColor={"white"}
-          borderRadius={"12px"}
-          mb={"10px"}
+          flex="1"
+          bg={"white"}
+          px={"20px"}
+          py={"16px"}
+          borderRadius={"16px"}
         >
-          <Grid templateColumns="repeat(5, 1fr)" py={"16px"} px="10px">
-            <GridItem px={"10px"} borderRight={"2px"} borderColor={"gray"}>
-              <Text textColor={"gray"}>Audience Location</Text>
-              <Text as="b">All</Text>
-            </GridItem>
-            <GridItem px={"10px"} borderRight={"2px"} borderColor={"gray"}>
-              <Text textColor={"gray"}>Audience Location</Text>
-              <Text as="b">Choose Size</Text>
-            </GridItem>
-            <GridItem px={"10px"} borderRight={"2px"} borderColor={"gray"}>
-              <Text textColor={"gray"}>Audience Location</Text>
-              <Text as="b">Any</Text>
-            </GridItem>
-            <GridItem px={"10px"}>
-              <Text textColor={"gray"}>Audience Location</Text>
-              <Text as="b">Any</Text>
-            </GridItem>
-            <GridItem px={"10px"}>
-              <Button
-                w={"100%"}
-                h="100%"
-                p={5}
-                bgColor={"gray.900"}
-                textColor={"White"}
-                size="lg"
-                borderRadius={"12px"}
+          <HStack
+            direction={"row"}
+            gap={"10px"}
+            justifyContent={"space-between"}
+          >
+            <Stack>
+              <Text fontSize={"16px"} textColor={"gray"}>
+                Audience Location
+              </Text>
+              <Text
+                fontWeight={"semibold"}
+                fontStyle={"Montserrat"}
+                fontSize={"16px"}
+                textColor={"black"}
               >
-                Show 4M results
-              </Button>
-            </GridItem>
-          </Grid>
+                All
+              </Text>
+            </Stack>
+
+            <Center height="50px">
+              <Divider orientation="vertical" />
+            </Center>
+
+            <Stack>
+              <Text fontSize={"16px"} textColor={"gray"}>
+                Influencer size
+              </Text>
+              <Text
+                fontWeight={"semibold"}
+                fontStyle={"Montserrat"}
+                fontSize={"16px"}
+                textColor={"black"}
+              >
+                Choose Size
+              </Text>
+            </Stack>
+
+            <Center height="50px">
+              <Divider orientation="vertical" />
+            </Center>
+
+            <Stack>
+              <Text fontSize={"16px"} textColor={"gray"}>
+                Audience Age
+              </Text>
+              <Text
+                fontWeight={"semibold"}
+                fontStyle={"Montserrat"}
+                fontSize={"16px"}
+                textColor={"black"}
+              >
+                Any
+              </Text>
+            </Stack>
+
+            <Center height="50px">
+              <Divider orientation="vertical"/>
+              
+            </Center>
+
+            <Stack>
+              <Text fontSize={"16px"} textColor={"gray"}>
+                Audience Gender
+              </Text>
+              <Text
+                fontWeight={"semibold"}
+                fontStyle={"Montserrat"}
+                fontSize={"16px"}
+                textColor={"black"}
+              >
+                Any
+              </Text>
+            </Stack>
+
+
+            <Button
+              size="lg"
+              fontWeight={"semibold"}
+              fontStyle={"Montserrat"}
+              fontSize={"16px"}
+              textColor={"white"}
+              bgColor={"black"}
+            >
+              Show 4M results
+            </Button>
+          </HStack>
         </Box>
 
-        <Box className="FilterBoxTwo" borderRadius={"12px"} bgColor={'white'} px={'20px'} py={'16px'}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit officiis distinctio vitae at? Debitis nihil totam sequi id aperiam consectetur natus saepe deserunt, consequatur recusandae dolorem voluptates voluptatum dolor libero!
+        <Box flex="2">
+          <Box overflow={"hidden"}>
+            <HStack
+              direction="row"
+              justifyContent={"space-between"}
+              gap={"10px"}
+            >
+              <Button
+                size={"lg"}
+                p={"auto"}
+                leftIcon={<DropDownArrowBlack />}
+                bgColor={"white"}
+                borderRadius={"12px"}
+              >
+                <Text fontSize={"16px"}>Any category</Text>
+              </Button>
+
+              <Box bgColor={"white"} width={"70%"} borderRadius={"12px"}>
+                <HStack>
+                  {" "}
+                  <Button
+                    rightIcon={<DropDownArrowBlack />}
+                    bgColor={"white"}
+                    size={"lg"}
+                  >
+                    <Text fontSize={"16px"}>Anywhere</Text>
+                  </Button>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents="none" boxSize={"50px"}>
+                      <SearchIcon></SearchIcon>
+                    </InputLeftElement>
+                    <Input
+                      type="text"
+                      placeholder="Type Name, Categories, Topics, bio keywords..."
+                      size={"lg"}
+                      variant={"filled"}
+                      bgColor={"white"}
+                    />
+                  </InputGroup>
+                </HStack>
+              </Box>
+
+              <Button
+                size={"lg"}
+                px={"20px"}
+                py={"16px"}
+                leftIcon={<DropDownArrowBlack />}
+                bgColor={"white"}
+                borderRadius={"12px"}
+              >
+                <Text fontSize={"16px"}>More Filters</Text>
+              </Button>
+            </HStack>
+          </Box>
         </Box>
-      </Box>
-    </Card>
+      </Stack>
+    </Box>
   );
 };
 

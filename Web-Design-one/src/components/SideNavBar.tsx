@@ -1,4 +1,4 @@
-import { Box, Button, VStack } from "@chakra-ui/react";
+import { Box, IconButton, Stack  } from "@chakra-ui/react";
 import Logo from "../assets/icon-component/Logo";
 import HomeIcon from "../assets/icon-component/HomeIcon";
 import AnnouncementSideIcon from "../assets/icon-component/SideAnnouncement";
@@ -9,60 +9,57 @@ import RandomIcon from "../assets/icon-component/RadomIcon";
 
 const SideNavBar = () => {
   return (
-    <VStack mt="32px">
-      <Box position="fixed">
-        <Box mb={"64px"}>
-          <Button
-            leftIcon={<Logo />}
-            borderRadius={"full"}
-            p={"revert-layer"}
+    <Box mx={"32px"} >
+      <Stack direction={"column"}>
+        <Box pb="64px" mt={"32px"}>
+          <IconButton
+            boxSize={"50px"}
             variant={"unstyled"}
-          />
+            aria-label={"Logo to go to homepage"}
+            icon={<Logo />}
+          ></IconButton>
         </Box>
 
-        <VStack gap={10}>
-          <Button
-            leftIcon={<HomeIcon />}
-            iconSpacing={"auto"}
-            p={"unset"}
+        <Stack gap={"24px"}>
+          <IconButton
+            boxSize={"Automatic"}
+            aria-label={"HomePage"}
+            icon={<HomeIcon />}
+            variant={"unstyled"}  
+          ></IconButton>
+          <IconButton
+            boxSize={"Automatic"}
+            aria-label={"Announcement Tab"}
+            icon={<AnnouncementSideIcon />}
             variant={"unstyled"}
-          />
-          <Button
-            leftIcon={<AnnouncementSideIcon />}
-            iconSpacing={"auto"}
-            p={"revert-layer"}
+          ></IconButton>
+          <IconButton
+            boxSize={"Automatic"}
+            aria-label={"User Analytics Tab"}
+            icon={<UserAnalyticsIcon />}
             variant={"unstyled"}
-          />
-          <Button
-            leftIcon={<UserAnalyticsIcon />}
-            
-           size={'md'}
+          ></IconButton>
+          <IconButton
+            boxSize={"Automatic"}
+            aria-label={"Statistics Tab"}
+            icon={<StatsIcon />}
             variant={"unstyled"}
-          />
-          <Button
-            leftIcon={<StatsIcon />}
-            iconSpacing={"auto"}
-            borderRadius={"full"}
-            p={"revert-layer"}
+          ></IconButton>
+          <IconButton
+            boxSize={"Automatic"}
+            aria-label={"Activity Tab"}
+            icon={<ActivityIcon />}
             variant={"unstyled"}
-          />
-          <Button
-            leftIcon={<ActivityIcon />}
-            iconSpacing={"auto"}
-            borderRadius={"full"}
-            p={"revert-layer"}
+          ></IconButton>
+          <IconButton
+            boxSize={"Automatic"}
+            aria-label={"Random tab"}
+            icon={<RandomIcon />}
             variant={"unstyled"}
-          />
-          <Button
-            leftIcon={<RandomIcon />}
-            iconSpacing={"auto"}
-            borderRadius={"full"}
-            p={"revert-layer"}
-            variant={"unstyled"}
-          />
-        </VStack>
-      </Box>
-    </VStack>
+          ></IconButton>
+        </Stack>
+      </Stack>
+    </Box>
   );
 };
 

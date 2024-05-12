@@ -4,9 +4,7 @@ import {
   HStack,
   Switch,
   Text,
-  SimpleGrid,
-  Menu,
-  MenuButton,
+  Stack,
 } from "@chakra-ui/react";
 
 import SortIcon from "../../assets/icon-component/SortIcon";
@@ -16,51 +14,59 @@ import DropDownIconWhite from "../../assets/icon-component/DropDownIconWhite";
 
 const SecondoryFilterSection = () => {
   return (
-    <Box borderBottomColor={"black.100"} borderBottomWidth={"2px"} mr={"28px"}>
-      <HStack
-        className="filterSection"
-        justify={"space-between"}
-        mr="28px"
-        my="20px"
+    <Box mr={"24px"} borderBottomWidth={"1px"} borderBottomColor={'black'}>
+      <Stack
+        direction={"row"}
+        justifyContent={"space-between"}
+        px={"28px"}
+        py={"20px"}
       >
-        <SimpleGrid>
-          <HStack ml={"28px"}>
+        <Box>
+          <HStack justifyContent={"space-between"} gap={"32px"}>
             <Button
-              rightIcon={<SortIcon />}
               variant={"outline"}
-              size={"lg"}
-              borderRadius={"12px"}
+              rightIcon={<SortIcon />}
+              px={"16px"}
+              py={"14px"}
+              fontWeight={"semibold"}
+              fontStyle={"Montserrat"}
+              fontSize={"14px"}
+              textColor={"black"}
             >
-              Best Relevance
+              <Text>Best Relevance</Text>
             </Button>
-            <HStack>
-              <Box pl="32px">
-                <VerifiedIcon />
-              </Box>
-              <Text fontSize={"16px"}>App Creators</Text>
-            </HStack>
-            <Switch size="sm" pl={2} />
-          </HStack>
-        </SimpleGrid>
 
-        <HStack gap={4}>
-          <Menu>
-            <MenuButton
-              as={Button}
-              leftIcon={<AddCreatorIcon />}
-              rightIcon={<DropDownIconWhite />}
-              size={"lg"}
-              px={4}
-              py={6}
-              bgColor="black"
-              variant={"solid"}
-              textColor={"white"}
-            >
-              Add Creators
-            </MenuButton>
-          </Menu>
-        </HStack>
-      </HStack>
+            <HStack direction={"row"} gap={"16px"}>
+              <Stack direction={"row"} gap={"8px"}>
+                <VerifiedIcon />
+                <Text
+                  fontStyle={"Montserrat"}
+                  fontSize={"16px"}
+                  textColor={"#666666"}
+                >
+                  App Creators
+                </Text>
+              </Stack>
+              <Switch size={"sm"} />
+            </HStack>
+
+            <Box></Box>
+          </HStack>
+        </Box>
+
+        <Box>
+          <Button
+            rightIcon={<DropDownIconWhite/>}
+            leftIcon={<AddCreatorIcon/>}
+            size={'lg'}
+            bgColor={"black"}
+            fontWeight={"semibold"}
+            fontStyle={"Montserrat"}
+            fontSize={"14px"}
+            textColor={"white"}
+          >Add Creators</Button>
+        </Box>
+      </Stack>
     </Box>
   );
 };
