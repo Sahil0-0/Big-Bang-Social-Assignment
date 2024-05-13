@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   HStack,
+  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
@@ -18,43 +19,42 @@ const Header = () => {
     <HStack className="headerLine" my="32px" justifyContent="space-between">
       <Box>
         <InputGroup>
-          <InputLeftElement pointerEvents="none" boxSize={"50px"}>
+          <InputLeftElement pointerEvents="none" boxSize={"40px"}>
             <SearchIcon></SearchIcon>
           </InputLeftElement>
           <Input
             type="text"
             placeholder="Search key word.."
             borderRadius="full"
-            size={"lg"}
+            size={"50px"}
           />
         </InputGroup>
       </Box>
 
-      <HStack gap={2}>
+      <HStack gap={"20px"}>
         <Button
           leftIcon={<CoinIcon />}
           borderRadius="full"
           variant="outline"
-          colorScheme="black"
-          pr={"16px"}
+          borderColor={"black"}
           pl={"4px"}
+          size={"sm"}
           w={"fit-content"}
         >
           25,635 Coins
         </Button>
-        <Button
-          leftIcon={<NotificationIcon />}
-          iconSpacing={"auto"}
-          borderRadius={"full"}
-          p={"revert-layer"}
+
+        <IconButton
+          aria-label={"Logo to go to homepage"}
+          icon={<NotificationIcon />}
+          boxSize={"Automatic"}
           variant={"unstyled"}
-        />
+        ></IconButton>
 
         <Button
           leftIcon={<Announcement />}
-          iconSpacing={"auto"}
+          boxSize={"Automatic"}
           borderRadius={"full"}
-          p={"revert-layer"}
           variant={"unstyled"}
         />
         <Button

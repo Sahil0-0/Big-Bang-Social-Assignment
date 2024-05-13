@@ -22,22 +22,24 @@ import ProfileIcon from "../assets/icon-component/ProfileIcon";
 import LikeIcon from "../assets/icon-component/LikeIcon";
 import LikeIconGray from "../assets/icon-component/LikeIconGray";
 import DollarIcon from "../assets/icon-component/DollarIcon";
-
 import NicheIcon from "../assets/icon-component/NiceIcon";
 import BudgetIcon from "../assets/icon-component/BudgetIcon";
 import SearchIcon from "../assets/icon-component/SearchIcon";
 import FilterIcon from "../assets/icon-component/FilterIcon";
 import CloseCircleIcon from "../assets/icon-component/CloseCircleIcon";
+import Cards from "./SubComponents/Cards";
+
+
 const MainPage = () => {
   return (
     <Box>
-      <Stack direction={'row'} gap={"12px"} >
+      <Stack direction={"row"} gap={"12px"}>
         <Flex
           className={"MainSectionOne"}
           w={"30%"}
           border={"2px"}
           borderRadius={"16px"}
-          overflow={"visible"}
+          overflow={"hidden"}
         >
           <Box flex="1">
             <Box
@@ -293,7 +295,7 @@ const MainPage = () => {
                             borderRadius={"full"}
                             boxShadow={"null"}
                           >
-                            <Text >Fashion/ beauty</Text>
+                            <Text>Fashion/ beauty</Text>
                           </Card>
                           <Card
                             px={"12px"}
@@ -375,7 +377,7 @@ const MainPage = () => {
           //this is for th second section of the main page
           className={"MainSectionTwo"}
           w={"70%"}
-          h={'fit-content'}
+          h={"fit-content"}
           border={"2px"}
           borderRadius={"16px"}
           overflow={"hidden"}
@@ -492,8 +494,11 @@ const MainPage = () => {
                     </Box>
                   </HStack>
                 </Box>
+              </Box>
 
-                <Box className={"CardSections"}></Box>
+              <Box  mb={"24px"} mx={"24px"}>
+                <Cards />
+                
               </Box>
             </Stack>
           </Box>
